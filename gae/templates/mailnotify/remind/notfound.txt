@@ -1,0 +1,6 @@
+{% extends 'remind/base.txt' %}
+
+{% block reason %}
+We could not locate the email or conversation in your mailbox, that
+you wanted to be reminded of.
+{% endblock %}

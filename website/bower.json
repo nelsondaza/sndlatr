@@ -1,0 +1,10 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0"
+  },
+  "devDependencies": {
+    "jquery": "~2.0.3"
+  }
+}

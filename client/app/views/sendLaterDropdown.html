@@ -1,0 +1,21 @@
+<div class="sndlatr dropup slSendDropdown"
+     data-ng-class="{open: dropdownShown}"
+     data-dropdown-closer="dropdownShown">
+    <button class="slBtn" data-btn-checkbox
+            data-ng-disabled="ngDisabled"
+            data-ng-model="dropdownShown">
+        Send later
+        <span class="caret"></span>
+    </button>
+    <ul data-relative-times-menu
+        data-wb-focus="dropdownShown"
+        data-date="date"
+        data-action-label="sends"
+        data-on-select="selectDate(date)">
+        <li>
+            <a class="J-N" href data-ng-click="pickDate()">
+                <span class="slIcon-calendar-small"></span> Pick date
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,10 @@
+{
+  "name": "sndlatr",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.0.3"
+  },
+  "devDependencies": {
+    "underscore": "~1.5.1"
+  }
+}

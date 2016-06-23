@@ -1,0 +1,5 @@
+{% extends 'send_later/base.txt' %}
+
+{% block reason %}
+The email contains an invalid receiver email address.
+{% endblock %}

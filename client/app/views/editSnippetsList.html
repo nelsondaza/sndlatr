@@ -1,0 +1,63 @@
+<div class="slEditSnippetsList">
+    <div data-ng-show="view=='list'" class="slEditSnippetsView list">
+        <div class="slHeading">
+            <button class="slBtn slBtn-primary" type="button"
+                    data-ng-click="newSnippet()">New Snippet
+            </button>
+            <h4>
+                Edit Snippets
+            </h4>
+        </div>
+        <div class="slBody">
+            <ul class="slSnippetsList">
+                <li data-ng-repeat="snippet in snippets | orderBy:['-usageCnt', '-updatedAt']">
+                    <a href data-ng-click="edit(snippet)">
+                        <span class="slName">
+                            {{snippet.name}}
+                            <span data-ng-hide="snippet.name">unnamed</span>
+                        </span>
+                        <span class="slSubject">
+                            {{snippet.subject}}
+                        </span>
+                        <span class="slBody">
+                            <span data-ng-show="snippet.body && snippet.subject"> - </span>
+                            {{snippet.body}}
+                        </span>
+                    </a>
+
+                    <div class="slSnippetToolbar">
+                        <button type="button"
+                                class="slBtn slBtn-icon" title="delete"
+                                data-ng-click="deleteSnippet(snippet)">
+                            <span class="slIcon-trash"></span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-ng-show="view=='edit'" class="slEditSnippetsView edit">
+        <div class="slHeading">
+            <div class="slEditHeaderContainer">
+                <button class="slBtn" data-ng-click="view='list'"
+                        title="Show all snippets">
+                    <span class="slIcon-chevron-left-small"></span>
+                </button>
+                <input type="text" data-ng-model="currentSnippet.name"
+                       class="slCurrentSnippetName"
+                       placeholder="Name of this snippet"/>
+                <span class="slSaveStatus">
+                    <span data-ng-show="currentSnippet.isStored() && !currentSnippet.$dirty">
+                        Saved
+                    </span>
+                    <span data-ng-show="currentSnippet.$dirty">
+                        Saving...
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="slBody">
+            <div class="editorContainer"></div>
+        </div>
+    </div>
+</div>

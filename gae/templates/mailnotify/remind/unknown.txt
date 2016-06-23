@@ -1,0 +1,5 @@
+{% extends 'remind/base.txt' %}
+
+{% block reason %}
+We don't know what exactly went wrong.
+{% endblock %}

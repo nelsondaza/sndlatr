@@ -1,0 +1,456 @@
+@import 'gmail_classes';
+@import 'compass_twitter_bootstrap/mixins';
+
+$toolbar_bg_color: #f5f5f5;
+$toolbar_border_color: #cfcfcf;
+$notif_background_color: #F9EDBE;
+$notif_border_color: #F0C36D;
+
+.slDraftToolbar {
+  background-color: $toolbar_bg_color;
+  // border: 1px solid $toolbar_border_color;
+  padding: 1px 4px;
+  position: relative;
+}
+
+.sndlatr input[type="text"],
+textarea {
+  border: 1px solid #ccc;
+  padding: 2px;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.sndlatr.dropdown,
+.sndlatr.dropup {
+  input[type="text"] {
+    width: 100%;
+    @include ctb-box-sizing(border-box);
+  }
+}
+
+.slDraftSend {
+  .slScheduledDate {
+    background: $notif_background_color;
+    border: 1px solid $notif_border_color;
+    padding: 1px 4px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 17px;
+    margin: auto 0;
+    margin-right: 5px;
+    position: absolute;
+    display: block;
+    float: right;
+  }
+  &.slCompose .slScheduledDate {
+    float: none;
+    position: relative;
+    margin: 0 -4px;
+  }
+
+  &.slReply {
+    border-bottom: 1px solid $toolbar_border_color;
+  }
+}
+
+@media screen and (max-width: 1100px)  {
+  .slDraftSend.slReply .slScheduledDate {
+    font-size: 95%;
+  }
+}
+
+.slSnippetsDropdown {
+  display: inline-block;
+  input {
+    margin-bottom: 10px;
+  }
+  li a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
+    .slName {
+      font-weight: bold;
+      display: block;
+    }
+    .slBody {
+      color: #777;
+    }
+  }
+  > .slBtn {
+    .caret {
+      border-color: transparent;
+    }
+    &:hover .caret {
+    }
+  }
+}
+
+.slSendDropdown, .slRemindDropdown {
+  display: inline-block;
+  input {
+    border: 1px solid #ccc;
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  li.slDateHuman {
+    padding: 0 8px;
+    margin-bottom: 10px;
+    input {
+      padding: 2px;
+      width: 100%;
+      @include ctb-box-sizing(border-box);
+    }
+
+  }
+
+  .slDateFormatted {
+    white-space: nowrap;
+    height: 14px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  li .slIcon-calendar-small {
+    margin-left: -22px;
+    // display: block;
+    float: left;
+  }
+  li:hover .slIcon-calendar-small {
+    opacity: 0.8;
+  }
+}
+
+.slDatePickerDialog {
+  .slModal-body {
+    overflow: visible;
+  }
+  .slDatePicker {
+    display: inline-block;
+  }
+
+  .help {
+    color: $textColor;
+    margin-bottom: 10px;
+  }
+
+  .scheduledText {
+    color: $textColor;
+    margin-top: 20px;
+  }
+
+  .slDateInput {
+    float: left;
+    border: 1px solid #ccc;
+    border-right: none;
+    padding: 0px 4px;
+    @include ctb-clearfix();
+    input {
+      line-height: 0;
+      padding: 0;
+      padding-left: 4px;
+      height: 29px;
+      width: 150px;
+      border: none;
+      margin: 0;
+      outline: none;
+    }
+    .slIcon-clock {
+      vertical-align: top;
+      margin-top: 2px;
+      opacity: 0.5;
+      // line-height: 29px;
+    }
+  }
+}
+
+.slInjectedReplyView {
+  // reply view
+  #{$gm_draft_toolbar} {
+    // height of toolbar in reply view.
+    height: 85px !important;
+    clip: auto !important;
+  }
+  // padding element ad end of toolbar used if at fixed position.
+  .aC4 {
+    height: 86px !important;
+  }
+  // container of contenteditable, avoid flickering of scrollbars
+  // (don't know why they appear)
+  .aO7 {
+    overflow: hidden;
+  }
+}
+
+.slInjectedComposeView {
+  // This is the box in the compose window that is resized with the window size
+  // Add an offset of 42px by adding a border into the calculation
+  //(and hiding it).
+  #{$gm_compose_resizearea} {
+    @include ctb-box-sizing(border-box);
+    border-bottom: 42px solid transparent;
+    margin-bottom: -42px;
+    // first child is explicitly sized too
+    > div:first-child {
+      @include ctb-box-sizing(border-box);
+      border-bottom: 42px solid transparent;
+    }
+  }
+  #{$gm_contenteditable} {
+    padding-bottom: 42px;
+    min-height: 0 !important;
+  }
+}
+
+// compose popup (separate window)
+#{$gm_compose_popup} .slInjectedComposeView {
+  #{$gm_draft_toolbar} {
+    position: fixed !important;
+  }
+  #{$gm_contenteditable} {
+    margin-bottom: 44px;
+  }
+}
+
+.slDraftsList {
+  .slDraftScheduled {
+    color: #ad8a22;
+  }
+}
+
+.slHasScheduled.slDraftsList col.xX {
+  width: 24ex;
+}
+
+.slInvalidReceiversDialog {
+  .slModal-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.slRemindToolbar {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 16px;
+  .slRemindDropdown .slBtn {
+    margin: 0;
+    .slIcon-clock-small {
+      opacity: 0.6;
+      margin-top: -2px;
+    }
+    &:hover,
+    &.active {
+      .slIcon-clock-small {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#{$gm_cvtoolbar_small_width} .slRemindToolbar .slBtn {
+  padding: 0;
+}
+
+.slRemindBox {
+  padding: 8px 9px 5px 9px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #444;
+
+  .slAction {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    a {
+      color: #15c;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .slTitle {
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .slScheduledDate {
+    white-space: nowrap;
+    color: #222;
+  }
+}
+
+// Snippets
+.slSnippetsInput {
+  margin: 0 8px;
+}
+
+.slSnippetsWindow {
+  width: 600px;
+  margin-left: -300px;
+}
+
+// @media screen and (min-width: 600px) {
+//   margin-left: -40%;
+//   .slSnippetsWindow {
+//     width: 80%;
+//     margin-left: -40%;
+//   }
+// }
+
+.slEditSnippetsDialog {
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    z-index: 10;
+  }
+  .slModal-body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    // padding-top: 0px;
+  }
+
+}
+
+.slEditSnippetsView {
+  > .slHeading {
+    padding: 15px 30px;
+    padding-right: 50px;
+    // Close icon
+    .close {
+      margin-top: 2px;
+    }
+  }
+  > .slBody {
+    padding: 30px;
+    padding-top: 10px;
+  }
+  &.list .slHeading .slBtn {
+    float: right;
+  }
+  &.edit .slEditHeaderContainer {
+    position: relative;
+    height: 40px;
+    input {
+      position: absolute;
+      top: 10px;
+      left: 40px;
+      right: 55px;
+      border: none;
+      margin: 0;
+      font-size: $baseFontSize * 1.25;
+      font-weight: $headingsFontWeight;
+      vertical-align: middle;
+      display: block;
+      @include ctb-box-sizing(border-box);
+    }
+    .slSaveStatus {
+      line-height: 40px;
+      color: #888;
+      float: right;
+    }
+    .slBtn {
+      .slIcon-chevron-left-small {
+        opacity: 0.5;
+      }
+      &:hover .slIcon-chevron-left-small {
+        opacity: 0.8;
+      }
+      position: absolute;
+      left: 0px;
+      top: 7px;
+      min-width: 0;
+      margin: 0;
+    }
+  }
+}
+
+ul.slSnippetsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+
+  li {
+    margin: 0;
+    position: relative;
+    a {
+      padding: 4px 2px;
+      color: $dropdownLinkColor;
+      background: $dropdownBackground;
+      display: block;
+      // display: inline-block;
+      // vertical-align: text-bottom;
+      overflow: hidden;
+      max-width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    a:hover {
+      color: $dropdownLinkColorHover;
+      background: $dropdownLinkBackgroundHover;
+    }
+    .slName {
+      display: block;
+      font-weight: bold;
+    }
+    .slSubject {
+    }
+    .slBody {
+      color: #777;
+    }
+    .slSnippetToolbar {
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      .slBtn {
+        height: 100%;
+        margin: 0;
+      }
+    }
+    &:hover {
+      .slSnippetToolbar {
+        display: block;
+      }
+    }
+  }
+}
+
+.slSnippetForm {
+  input[type="text"],
+  textarea {
+    @include ctb-box-sizing(border-box);
+    width: 100%;
+    border-top-width: 0;
+    padding: 8px;
+    margin: 0;
+  }
+  .slSubject input {
+    border-top-width: 1px;
+  }
+  .slName input {
+    padding-left: 0;
+    border: none;
+    font-weight: bold;
+    width: auto;
+    //  border-top-width: 1px;
+  }
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+}

@@ -1,0 +1,9 @@
+<span class="sndlatr slDraftScheduled" data-ng-hide="origElShown"
+      data-ng-switch data-on="job.getDisplayState()">
+    <span data-ng-switch-when="scheduled">
+        scheduled for {{job.scheduledAt|date:'short'}}
+    </span>
+    <span data-ng-switch-when="processing">
+        currently being sent
+    </span>
+</span>

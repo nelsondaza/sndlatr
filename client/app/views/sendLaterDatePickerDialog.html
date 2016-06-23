@@ -1,0 +1,34 @@
+<div class="sndlatr slDatePickerDialog">
+    <div class="slModal-header">
+        <button type="button" class="close"
+                data-ng-click="cancel()">&times;</button>
+        <h4>Send Later</h4>
+    </div>
+
+    <div class="slModal-body">
+        <div class="help">Schedule mail to be send at:</div>
+        <div data-datetimepicker="$parent.date"></div>
+
+        <div class="scheduledText" data-ng-hide="isFuture">
+            Please select a date in the future
+        </div>
+        <div class="scheduledText" data-ng-show="isFuture">
+            Your mail will be sent on
+            {{date|date:'medium'}}<span data-ng-show="dateRelative">
+                ({{dateRelative}})</span>.
+        </div>
+    </div>
+    <div class="slModal-footer">
+        <button class="slBtn slBtn-primary"
+                tabindex="0"
+                data-ng-disabled="!isFuture"
+                data-ng-click="send()">
+            Send later
+        </button>
+        <button class="slBtn"
+                data-ng-click="cancel()"
+                tabindex="0">
+            Cancel
+        </button>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="sndlatr dropup slSnippetsDropdown"
+     data-ng-class="{open: dropdownShown}"
+     data-dropdown-closer="dropdownShown">
+    <button class="slBtn slBtn-flat" data-btn-checkbox
+            data-ng-model="dropdownShown"
+            data-ng-disabled="!$root.isInitialized"
+            data-tooltip="Snippets">
+        <span class="slIcon-snippet"></span>
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>
+            <form class="slSnippetsInput" data-ng-submit="onReturn()">
+                <input placeholder="type to search"
+                       type="text"
+                       data-wb-focus="dropdownShown"
+                       data-ng-model="keywords">
+            </form>
+        </li>
+        <li data-ng-repeat="snippet in filteredSnippets | limitTo: 5">
+            <a class="J-N"
+               href data-ng-click="selectSnippet(snippet)">
+                <span class="slName">
+                    {{snippet.name}}
+                    <span data-ng-hide="snippet.name">unnamed</span>
+                </span>
+                <span class="slSubject">
+                    {{snippet.subject}}
+                </span>
+                <span class="slBody">
+                    <span data-ng-show="snippet.body && snippet.subject"> - </span>
+                    {{snippet.body}}
+                </span>
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a class="J-N slMailToSnippet"
+               href data-ng-click="mailToSnippet()">
+                Create snippet from this mail
+            </a>
+        </li>
+        <li>
+            <a class="J-N slEditSnippets"
+               href data-ng-click="editSnippets()">
+                Edit snippets
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body %}
+<p>
+    Sorry, we could not send your email with subject <b>{{subject}}</b> that was
+    scheduled for <b>{{scheduled_at|date}}</b>.
+</p>
+{% block reason %}{% endblock %}
+{% endblock %}

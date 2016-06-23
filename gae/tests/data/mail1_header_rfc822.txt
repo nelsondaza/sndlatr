@@ -1,0 +1,15 @@
+Return-Path: <to@example.com>
+Received: from [127.0.1.1] (p4FC1FA4D.dip0.t-ipconnect.de. [79.193.250.77])
+        by mx.google.com with ESMTPSA id f49sm192850416eec.7.1969.12.31.16.00.00
+        (version=TLSv1.1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 17 Oct 2013 06:20:08 -0700 (PDT)
+Message-ID: <msg-id-mail1>
+Content-Type: multipart/mixed; boundary="===============1228251077940972437=="
+MIME-Version: 1.0
+To: to@example.com
+From: from@example.com
+Reply-To:
+References: ref1 ref2
+In-Reply-To: <in-reply-to-mail1>
+Subject: Mail1 Subject
+Date: Thu, 17 Oct 2013 13:20:06 -0000

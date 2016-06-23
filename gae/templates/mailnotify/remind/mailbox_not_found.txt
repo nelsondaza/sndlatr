@@ -1,0 +1,5 @@
+{% extends 'remind/base.txt' %}
+
+{% block reason %}
+{% include '_mailbox_not_found_reason.txt' %}
+{% endblock %}

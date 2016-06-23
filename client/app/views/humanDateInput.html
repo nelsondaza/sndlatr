@@ -1,0 +1,14 @@
+<form class="slHumanDateInput" data-ng-submit="onReturn()">
+    <input placeholder="e.g.: friday at 9 am"
+           data-wb-focus="wbFocus"
+           data-ng-model="dateHuman">
+
+    <div class="slDateFormatted">
+        <span data-ng-show="date" data-ng-transclude>
+        </span>
+        <span class="invalid"
+              data-ng-show="humanCooledDown && dateHuman && !date">
+            Date is not understood.
+        </span>
+    </div>
+</form>

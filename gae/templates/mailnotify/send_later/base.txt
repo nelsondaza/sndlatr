@@ -1,0 +1,8 @@
+{% extends 'base.txt' %}
+{% block body %}
+Sorry, we could not send your email with subject *{{subject}}* that was
+scheduled for *{{scheduled_at|date}}*.
+
+
+{% block reason %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,37 @@
+// Gmail obfuscated css selectors mapped to variable names.
+
+$gm_contenteditable: '.Am[contenteditable="true"]';
+$gm_draft_toolbar: '.aDj';
+
+$gm_compose_popup: '.xE.xp';
+
+$gm_compose_resizearea: '.GP';
+
+
+// Text element that contains accounts email address.
+$gm_account_email: '.gb_o .gb_O';
+
+// separate browser compose window, editor area
+$gm_compose_popup_draft: '#{$gm_compose_popup} div.nH[role="main"] .M9 .aoI';
+
+// Reply area (in thread)
+$gm_reply: '.gB.acO .aoI';
+
+// thread list main area
+$gm_threadlist: 'div.BltHke[role="main"]';
+
+// thread list item
+$gm_threadlistitem: 'table.F.cf.zt';
+
+// floating compose message window (new mail).
+$gm_compose_dialog: '.nH.Hd[role="dialog"]';
+
+$gm_cvtoolbar_small_width: '.aCh';
+
+$gm_menu_item: '.J-N';
+
+// Toolbar in conversation view.
+$gm_conversation_toolbar: '.iH';
+// Conversation main table
+$gm_conversation: 'table.Bs';
+

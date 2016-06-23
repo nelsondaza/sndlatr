@@ -1,0 +1,51 @@
+@mixin absolute-full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  transition: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+@mixin bezier-transition($seconds) {
+  @include transition(cubic-bezier(0.250, 0.460, 0.450, 0.940) $seconds);
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animate($value) {
+  -webkit-animation: $value;
+  animation: $value;
+}
+
+
+/**
+* dont use this - too slow
+*/
+@mixin drop-shadow-filter {
+  filter: drop-shadow($bg_color_overlay 0 0 10px);
+  -webkit-filter: drop-shadow($bg_color_overlay 0 0 10px);
+}
+
+@mixin linear-gradient($pos, $startColor, $endColor) {
+  background-image: -webkit-linear-gradient($pos, $startColor, $endColor);
+  background-image: linear-gradient($pos, $startColor, $endColor);
+}
+
+

@@ -1,0 +1,5 @@
+{% extends 'remind/base.txt' %}
+
+{% block reason %}
+{% include '_auth_reason.txt' %}
+{% endblock %}

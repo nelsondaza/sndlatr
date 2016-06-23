@@ -1,0 +1,32 @@
+<div class="sndlatr slDraftSend" data-ng-class="viewType">
+    <div class="slDraftToolbar">
+        <div data-send-later-dropdown="job.scheduledAt"
+             data-ng-disabled="!job.isChangeable()"
+             data-on-select="sendLater(date)"></div>
+        <div data-snippets-dropdown data-get-mail="getMail()"
+                data-on-select="insertSnippet(snippet)"></div>
+
+        <div class="slScheduledDate"
+             data-ng-show="job.scheduledAt && job.isStored()"
+             data-ng-switch data-on="job.getDisplayState()">
+            <span data-ng-switch-when="scheduled">
+                <span data-ng-show="job.id">
+                Will be sent on
+                {{job.scheduledAt|date:'medium'}}<span
+                        data-ng-show="scheduledAtRelative">
+                    ({{scheduledAtRelative}})</span>.
+                <a href data-ng-click="cancelJob()">Cancel</a>
+                </span>
+                <span data-ng-hide="job.id">
+                    scheduling...
+                </span>
+            </span>
+            <span data-ng-switch-when="processing">
+                Is currently being sent...
+            </span>
+            <span data-ng-switch-when="sent">
+                Has been sent.
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.wbTimePicker {
+  display: inline-block;
+
+  .wbPicker {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding-right: 4px;
+    .caret {
+      border-top-color: rgba(0, 0, 0, 0.5);
+      margin-top: 12px;
+    }
+  }
+
+  input {
+    height: 29px;
+    width: 60px;
+    border: none;
+    padding: 0 8px 0 4px;
+    outline: none;
+  }
+
+  .dropdown-menu {
+    max-height: 200px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 90px;
+
+    li {
+      padding: 3px 5px;
+      cursor: pointer;
+      &:hover {
+        background: #f0f0f0;
+      }
+    }
+  }
+}

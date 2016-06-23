@@ -1,0 +1,8 @@
+{% extends 'base.txt' %}
+{% block body %}
+Sorry, we could handle your reminder for the email with subject *{{subject}}*
+that you set up for *{{scheduled_at|date}}*.
+
+
+{% block reason %}{% endblock %}
+{% endblock %}

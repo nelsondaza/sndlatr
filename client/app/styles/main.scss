@@ -1,0 +1,50 @@
+$anim_duration: 0.5s;
+$bg_color_overlay: rgba(0, 0, 0, 0.7);
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
+@import "compass";
+
+@import 'variables';
+
+.sndlatr {
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  a {
+    text-decoration: none;
+  }
+  @import 'type';
+  @import 'scrollbars';
+}
+
+@import 'close';
+@import 'dropdowns';
+@import 'mixins';
+@import 'gmail_events';
+@import 'buttons';
+@import 'datepicker';
+@import 'modals';
+@import 'icons';
+@import 'widgets/timepicker';
+@import 'views';
+
+.sndlatr {
+  input[type="checkbox"] {
+    display: none;
+    &+.slCheckboxSibling {
+      width: 21px;
+      height: 21px;
+
+      visibility: visible;
+      // content: '';
+      vertical-align: middle;
+      display: inline-block;
+      @include slIcon(checkbox-unchecked);
+    }
+    &:checked+.slCheckboxSibling {
+      @include slIcon(checkbox-checked);
+    }
+  }
+}

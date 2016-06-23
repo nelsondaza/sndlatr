@@ -1,0 +1,14 @@
+<div class="wbTimePicker dropdown"
+     data-ng-class="{open: dropdownShown}"
+     data-dropdown-closer="dropdownShown">
+    <div class="wbPicker" data-ng-click="dropdownShown=true">
+        <input data-ng-model="timeInput"/>
+        <span class="caret"></span>
+    </div>
+    <ul class="dropdown-menu">
+        <li data-ng-repeat="time in times"
+            data-ng-click="select(time)">{{time|date: 'shortTime'}}
+        </li>
+    </ul>
+
+</div>

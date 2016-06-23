@@ -1,0 +1,73 @@
+@import 'mixins';
+@import 'gmail_classes';
+
+@mixin highlight() {
+  box-shadow: green 0px 0px 20px;
+  opacity: 0.8;
+}
+
+@mixin dummyDomAnimation($name) {
+  @include keyframes('wbDomInserted' + $name) {
+    from {
+      clip: rect(1px, auto, auto, auto);
+    }
+    to {
+      clip: rect(0px, auto, auto, auto);
+    }
+  }
+}
+
+@mixin dummyAnimate($name) {
+  animation-duration: 0.001s !important;
+  animation-name: wbDomInserted + $name !important;
+  -webkit-animation-duration: 0.001s !important;
+  -webkit-animation-name: wbDomInserted + $name !important;
+}
+
+@each $name in compose, reply, accountmail, threadlist, threadlistupdate, cvtoolbar, cvmain {
+  @include dummyDomAnimation($name);
+}
+
+// Compose new message dialog (floating window)
+#{$gm_compose_dialog} {
+  // normal window
+  // div.nH[role="main"] .M9 { // popup window (own browser window)
+  @include dummyAnimate('compose');
+}
+
+.Ha {
+  // close button
+}
+
+#{$gm_account_email} {
+  @include dummyAnimate('accountmail');
+}
+
+#{$gm_compose_popup_draft} {
+  @include dummyAnimate('reply');
+}
+
+// reply section
+#{$gm_reply} {
+  @include dummyAnimate('reply');
+  // @include highlight();
+}
+
+#{$gm_threadlist} {
+  // table.F.cf.zt
+  // @include highlight();
+  // color: red;
+  @include dummyAnimate('threadlist');
+  // date is td.xW.xY
+  #{$gm_threadlistitem} {
+    @include dummyAnimate('threadlistupdate');
+  }
+}
+
+#{$gm_conversation_toolbar} {
+  @include dummyAnimate('cvtoolbar');
+}
+
+#{$gm_conversation} {
+  @include dummyAnimate('cvmain');
+}

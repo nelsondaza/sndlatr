@@ -1,0 +1,34 @@
+<div class="sndlatr dropdown slRemindDropdown"
+     data-wb-dropdown-root>
+    <button class="slBtn" data-btn-checkbox
+            data-ng-disabled="!job"
+            data-ng-model="dropdownShown"
+            data-tooltip="Set up reminder for this conversation">
+        <span class="slIcon-clock-small"></span>
+        <span class="caret"></span>
+    </button>
+    <div data-wb-abs-positioned data-deferred="true">
+        <div class="sndlatr slRemindDropdown wbAbs"
+                data-ng-class="{open: dropdownShown}"
+                data-dropdown-closer="dropdownShown">
+            <ul data-relative-times-menu
+                data-wb-focus="dropdownShown"
+                data-date="date"
+                data-action-label="reminds"
+                data-on-select="selectDate(date)">
+                <li>
+                    <a class="J-N" href data-ng-click="pickDate()">
+                        <span class="slIcon-calendar-small"></span> Pick date
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <label class="J-N">
+                        <input type="checkbox"
+                               data-ng-model="job.onlyIfNoreply">
+                        Only if nobody replies</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

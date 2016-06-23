@@ -1,0 +1,36 @@
+<div class="sndlatr slRemindBox"
+     data-ng-show="job.isInteresting()">
+    <div class="slTitle">Reminder</div>
+    <div data-ng-switch="job.getDisplayState()">
+        <div data-ng-switch-when="scheduled">
+            You will be reminded of this conversation at
+            <span class="slScheduledDate">
+                {{job.scheduledAt|date:'medium'}}.
+            </span>
+            <span data-ng-show="job.onlyIfNoreply">
+                But only if nobody replies.
+            </span>
+
+            <div class="slAction">
+                <a href data-ng-click="cancelJob()"
+                   data-ng-show="job.isStored() &&
+                   job.isChangeable()">Cancel reminder</a>
+            </div>
+        </div>
+        <div data-ng-switch-when="disabled">
+            Your reminder scheduled for
+            <span class="slScheduledDate">
+                {{job.scheduledAt|date:'medium'}}.
+            </span>
+            has been disabled by the reply from
+            <span class="slReplyFrom">
+                {{job.disabledReply.fromName || job.disabledReply.fromEmail}}.
+            </span>
+
+            <div class="slAction" data-ng-show="job.scheduledAt.isFuture()">
+                <a href data-ng-click="reEnableJob()">Re-enable reminder</a>
+            </div>
+        </div>
+        <div data-ng-switch-default>{{job.getDisplayState()}}</div>
+    </div>
+</div>

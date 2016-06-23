@@ -1,0 +1,9 @@
+{
+  "name": "sndlatr",
+  "fullName": "SndLatr Beta for Gmail™",
+  "id": "jid1-BjsD1atzRzdv1g",
+  "description": "Schedule emails to be sent later and setup remiders in GMail™.",
+  "author": "schibum",
+  "license": "MPL 2.0 (only the addon)",
+  "version": "0.1"
+}

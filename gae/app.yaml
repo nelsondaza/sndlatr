@@ -1,0 +1,29 @@
+application: sndlatr
+version: snippets
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+# - url: /css
+#   static_dir: css
+
+- url: /api/.*
+  script: main.app
+- url: /
+  static_dir: static
+
+
+libraries:
+- name: jinja2
+  version: latest
+- name: ssl
+  version: latest
+- name: pycrypto
+  version: latest
+
+inbound_services:
+- warmup
+
+builtins:
+- remote_api: on

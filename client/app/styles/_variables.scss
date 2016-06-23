@@ -1,0 +1,45 @@
+$baseLineHeight:        20px !default;
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            #222 !default;
+$grayDark:              #333 !default;
+$gray:                  #555 !default;
+$grayLight:             #999 !default;
+$grayLighter:           #eee !default;
+$white:                 #fff !default;
+
+$baseLineHeight: 20px !default;
+
+// Dropdowns
+// -------------------------
+$dropdownBackground: white;
+$dropdownBorder: 1px solid rgba(0, 0, 0, .2);
+$dropdownDividerTop: #e5e5e5;
+$dropdownDividerBottom: white;
+
+$dropdownLinkColor: #333;
+$dropdownLinkColorHover: #333;
+$dropdownLinkColorActive: #333;
+$dropdownFontSize: 13px;
+
+$dropdownLinkBackgroundActive: #eee;
+$dropdownLinkBackgroundHover: $dropdownLinkBackgroundActive;
+
+// z-indices
+$zindexDropdown: 1000;
+$zindexModalBackdrop:     1040;
+$zindexModal:             1050;
+
+$baseFontFamily: arial, sans-serif;
+// Fonts
+$baseFontSize:          13px;
+$baseLineHeight:        20px;
+
+$headingsFontFamily:    $baseFontFamily; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    normal;    // instead of browser default, bold
+$headingsColor:         inherit; // empty to use BS default, $textColor
+
+// Our variables
+$textColor: #444;

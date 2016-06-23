@@ -1,0 +1,135 @@
+<% extend '_base.html' %>
+
+<% block 'head': %>
+<title>Scheduled sending and reminders - SndLatr for Gmail</title>
+<meta name="description"
+      content="SndLatr for Gmail allows to schedule mails to be sent later,
+      setup reminders and more. Directly from your inbox.">
+<% end %>
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="logo"></div>
+        <h1>SndLatr <span class="for-gmail">for&nbsp;Gmail™</span></h1>
+
+        <p class="lead">Schedule emails to be sent later, reminders and
+            more.</p>
+
+        <p><a class="btn btn-lg btn-primary"
+              id="install_button">Install Now!</a>
+
+        <div class="alert alert-danger" id="unsupported_browser">
+            Sorry, SndLatr does not support your browser yet.
+            Currently only Desktop versions of <a
+                href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>
+            and <a
+                href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>
+            are supported.
+        </div>
+        </p>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-sm-6">
+            <h3>Schedule mails to be sent later</h3>
+
+            <p>You can set a future date for an email to be sent.
+                SndLatr will send you email automatically at the specified
+                time.
+                Enter a human readable date like "Friday
+                on 9 am" or "1st of next month, 11 am", or pick a
+                date using the date picker.
+                You do not need to be online at the scheduled date.</p>
+        </div>
+        <div class="col-sm-6">
+            <div class="miniscreen send-later-menu">
+            </div>
+        </div>
+    </div>
+    <div class="row marketing">
+        <div class="col-sm-6 col-sm-push-6">
+            <h3>Email reminders</h3>
+
+            <p>Set up reminders for conversations.
+                Reminders bring conversations back to your inbox at a
+                later date. This is a nice tool to keep your inbox clean.
+                Just archive the conversation after setting up a reminder
+                and it will be back in your inbox when you need to deal
+                with it. <br>
+                Want to be reminded if you don't hear back
+                within a given time frame? No problem.
+            </p>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6">
+            <div class="miniscreen remind-menu">
+            </div>
+        </div>
+    </div>
+    <div class="row marketing">
+        <div class="col-sm-6">
+            <h3>Snippets</h3>
+
+            <p>Find yourself writing repetitive mails? <br>
+                Then SndLatr snippets are made for you.
+                Just create a snippet to avoid typing the same text over and
+                over again by hand.
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="miniscreen snippets">
+            </div>
+        </div>
+    </div>
+    <div class="row marketing">
+        <div class="col-sm-6 col-sm-push-6">
+            <h3>Nicely integrates with Gmail</h3>
+
+            <p>SndLatr integrates nicely with Gmail. You just have to install
+                a small extension for Firefox or Chrome. It also works with Google Apps.
+                <br>
+                SndLatr does not mess around with your mails. It never alters
+                any data of your Gmail. It does not add any extra labels, move
+                around your messages or change subjects.
+                Scheduled emails stay in your Drafts folder.
+                You can edit them there just like any other email.
+            </p>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6">
+            <div class="miniscreen datepicker">
+            </div>
+        </div>
+    </div>
+    <div class="row marketing">
+        <div class="col-sm-6">
+            <h3>Free, No limits</h3>
+
+            <p>SndLatr is completely free to use while in Beta. The number of scheduled mails
+            or reminders is not limited in any way.
+            <br>
+
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="miniscreen drafts-list">
+            </div>
+        </div>
+    </div>
+    <div class="row marketing social">
+        <div class="col-sm-12">
+            <h3>SndLatr on Google+</h3>
+            <div class="gplus-badge">
+                <div class="g-page" data-width="300" data-href="//plus.google.com/109165926784306717120" data-layout="landscape" data-rel="publisher"></div>
+            </div>
+
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg3023"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="icons.svg"
+   inkscape:export-filename="/home/manu/development/w69b/sndlatr/client/app/images/sprites/slIcon/clocksimple.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3025" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.0737645"
+     inkscape:cx="226.02363"
+     inkscape:cy="495.26189"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="842"
+     inkscape:window-height="955"
+     inkscape:window-x="239"
+     inkscape:window-y="63"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3028">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3847"
+       transform="matrix(0.99760338,0,0,1.0338981,0.84802512,-18.739928)">
+      <path
+         transform="matrix(0.33621596,0,0,0.32418068,234.65919,433.52394)"
+         d="m 420.40984,332.13815 c 0,16.65079 -13.49813,30.14892 -30.14891,30.14892 -16.65079,0 -30.14892,-13.49813 -30.14892,-30.14892 0,-16.65078 13.49813,-30.14891 30.14892,-30.14891 16.65078,0 30.14891,13.49813 30.14891,30.14891 z"
+         sodipodi:ry="30.148912"
+         sodipodi:rx="30.148912"
+         sodipodi:cy="332.13815"
+         sodipodi:cx="390.26093"
+         id="path3828"
+         style="fill:none;stroke:#000000;stroke-width:11.28875446;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:transform-center-y="-0.8470413"
+         inkscape:transform-center-x="-1.5882093"
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3830"
+         d="m 365.60022,535.9468 0,5.82478 3.70072,3.39691"
+         style="fill:none;stroke:#000000;stroke-width:2.78279042;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="g3802"
+       transform="matrix(0.79166667,0,0,0.79166667,48.563321,116.02395)"
+       inkscape:export-filename="/home/manu/development/w69b/sndlatr/client/app/images/sprites/slIcon/trash.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/manu/development/w69b/sndlatr/client/app/images/sprites/slIcon/trash.png"
+         transform="matrix(0.11137801,0,0,0.11137801,224.47578,500.53199)"
+         id="g3776">
+        <g
+           id="g3770"
+           transform="translate(-65.849906,79.140712)">
+          <rect
+             rx="0"
+             y="271.37979"
+             x="181.27005"
+             height="155.71037"
+             width="139.57689"
+             id="rect2985"
+             style="fill:#000000;fill-opacity:1;stroke:none" />
+          <rect
+             y="228.03535"
+             x="165.64977"
+             height="24.453363"
+             width="170.81746"
+             id="rect3755"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+          <path
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 223.81358,211.60777 54.48982,0 10.67957,31.20195 -77.13051,0 z"
+             id="rect3757"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc" />
+        </g>
+      </g>
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/manu/development/w69b/sndlatr/client/app/images/sprites/slIcon/trash.png"
+         y="532.91498"
+         x="233.10394"
+         height="24"
+         width="24"
+         id="rect3782"
+         style="fill:none;stroke:none" />
+    </g>
+  </g>
+</svg>

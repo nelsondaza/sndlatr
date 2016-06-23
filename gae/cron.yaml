@@ -1,0 +1,5 @@
+cron:
+- description: queue scheduled jobs
+  url: /api/tasks/enqueue_scheduled
+  schedule: every 1 minutes synchronized
+

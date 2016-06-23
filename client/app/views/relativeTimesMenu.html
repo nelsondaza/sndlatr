@@ -1,0 +1,13 @@
+<ul class="dropdown-menu" data-ng-transclude>
+    <li class="slDateHuman"
+        data-human-date-input="date"
+        data-date-human="dateHuman"
+        data-wb-focus="wbFocus"
+        data-on-select="select(dateHuman)">
+        ENTER {{actionLabel}} at {{date|date:'medium'}}
+    </li>
+    <li data-ng-repeat="item in relativeTimes|filter:dateHuman|limitTo: 5|relDateOrder">
+        <a class="J-N"
+           href data-ng-click="select(item)">{{item}}</a>
+    </li>
+</ul>

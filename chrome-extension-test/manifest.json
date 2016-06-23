@@ -1,0 +1,17 @@
+{
+   "manifest_version": 2,
+   "name": "SndLatr Beta for Gmail™ Testing",
+   "description": "Schedule emails to be sent later. Integrates with GMail™.",
+   "icons": {
+      "128": "icon_128.png",
+      "48": "icon_48.png"
+   },
+   "permissions": [ "cookies", "*://mail.google.com/"],
+   "version": "0.1.0",
+   "content_scripts": [ {
+      "js": [ "inject.js"],
+      "matches": [ "https://mail.google.com/*", "http://mail.google.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://*.google.com https://*.sndlatr-dev.appspot.com https://sndlatr-dev.appspot.com https://*.sndlatr.com; object-src 'self'"
+}

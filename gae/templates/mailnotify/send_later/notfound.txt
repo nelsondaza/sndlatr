@@ -1,0 +1,6 @@
+{% extends 'send_later/base.txt' %}
+
+{% block reason %}
+We could not locate the email in your drafts folder.
+Please check if it still exists.
+{% endblock %}

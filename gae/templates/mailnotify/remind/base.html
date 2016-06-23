@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body %}
+<p>
+    Sorry, we could handle your reminder for the email with subject <b>{{subject}}</b> you
+    set up for <b>{{scheduled_at|date}}</b>
+</p>
+{% block reason %}{% endblock %}
+{% endblock %}

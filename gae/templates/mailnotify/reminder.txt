@@ -1,0 +1,4 @@
+{% extends 'base.txt' %}
+{% block body %}
+This is your reminder.
+{%endblock%}

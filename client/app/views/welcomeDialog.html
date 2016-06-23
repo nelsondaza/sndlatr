@@ -1,0 +1,25 @@
+<div class="sndlatr slWelcomeDialog">
+    <div class="slModal-header">
+        <button type="button" class="close"
+                data-ng-click="cancel()">&times;</button>
+        <h4>Welcome to sndlatr</h4>
+    </div>
+
+    <div class="slModal-body">
+        <div class="intro">
+            Congratulations! Sndlatr is almost ready to use.
+            In order to use complete setup, you need to grant it accesss to
+            your mailbox ({{email}}).
+        </div>
+        <button class="slBtn slBtn-primary"
+                tabindex="0"
+                data-ng-click="grantAccess()">
+            Grant Access
+        </button>
+    </div>
+    <div class="slModal-footer">
+        <button class="slBtn"
+                data-ng-click="cancel()"
+                tabindex="0">Not now</button>
+    </div>
+</div>

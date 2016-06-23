@@ -1,0 +1,28 @@
+<div class="sndlatr slConfirmSnippetDialog">
+    <div class="slModal-header">
+        <button type="button" class="close"
+                data-ng-click="close()">&times;</button>
+        <h4>This mail is not empty</h4>
+    </div>
+
+    <div class="slModal-body">
+        <div class="message">
+            Do you want to replace the existing content of this mail?
+        </div>
+    </div>
+    <div class="slModal-footer">
+        <button class="slBtn"
+                data-ng-click="close()">Cancel
+        </button>
+        <button class="slBtn"
+                data-ng-click="close('replace')"
+                data-tooltip="Discards the existing content of your mail">
+            Replace existing
+        </button>
+        <button class="slBtn slBtn-primary"
+                data-ng-click="close('append')"
+                data-tooltip="Appends snippet to existing content of your mail"
+                data-wb-focus="true">Append
+        </button>
+    </div>
+</div>

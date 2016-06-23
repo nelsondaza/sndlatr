@@ -1,0 +1,46 @@
+.slDatePicker {
+  font-family: $baseFontFamily;
+  th {
+    font-weight: normal;
+    font-size: $baseFontSize;
+    color: #444;
+  }
+  td, th {
+    width: 35px;
+  }
+
+  .btn {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    color: black;
+    padding: 2px 5px;
+    margin: 0;
+    border: 1px solid transparent;
+    // display: block;
+
+    &[disabled] {
+      text-decoration: none;
+      cursor: default;
+      opacity: 0.6;
+    }
+  }
+
+  tbody {
+    .btn:hover {
+      background-color: #ddd;
+    }
+  }
+
+  .btn-info {
+    border-color: #aaa;
+    background-color: #eee;
+  }
+
+  .btn-icon {
+    opacity: 0.5;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
