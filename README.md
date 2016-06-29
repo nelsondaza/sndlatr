@@ -10,7 +10,7 @@ Costs for hosting the service on Google App Engine are quite low (~$US 0,001 /us
 My intentions for handing over the Chrome Extension to a new maintainer, while relasing the software as open source at the same time, is to give users a choice of how to continue using it. You can either do nothing, and trust Nathan continue operating it in your interest, or just roll your own version or find someone else who does.
 Nathan has agreed to make any derivative work that he distributes within the next 3 months available under the same license terms.
 
-I hope that this step will to be help this project to be maintained and improved properly in the future and allow anyone interested to contribute to do that.
+I hope that this step will e help this project to be maintained and improved properly in the future and allow anyone interested to contribute.
 
 
 ## Project Structure:
