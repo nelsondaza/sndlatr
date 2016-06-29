@@ -1,6 +1,6 @@
 # SndLatr source code
 
-I (developer of sndlatr) no longer have the time to actively continue developing or maintaining SndLatr with the attribution it deservers.
+I (developer of sndlatr) no longer have the time to actively continue developing or maintaining SndLatr with the dedication it deservers.
 
 Nathan Latka (http://nathanlatka.com/) has taken over the existing Chrome Extension item and will probably take over the existing server infrastructure and user base in a while. He intends to continue operating the service, professionalize it, and possibly commercialize/monetize it in the future.
 
